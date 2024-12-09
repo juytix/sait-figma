@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>System control version</title>
+<style>
+body {
+  background-color: #FFFFE0;
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 1.5em;
+  position: relative;
+}
+
+#header-container {
+  background-color: #000;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+  height: 100px;
+}
+
+#header-container h1 {
+  margin: 0;
+}
+
+#content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+button {
+  background-color: white;
+  color: black;
+  padding: 75px 150px;
+  border: none;
+  border-radius: 10px;
+  font-size: 3em;
+  transition:0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  position: relative;
+}
+
+button:hover {
+  background-color: #DAA520;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  opacity: 0;
+  transition: opacity 0.3s;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+button:hover .tooltip {
+  opacity: 1;
+}
+
+.input-box {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 60px; 
+  border-radius: 5px;
+  display: none;
+  width: 400px; 
+  z-index: 100;
+  font-size: 1.6em; 
+}
+
+.input-box input[type="text"] {
+  width: 280px; 
+  padding: 15px; 
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 3px;
+  color: black;
+  margin-right: 10px;
+  font-size: 1.6em; 
+}
+
+.input-box button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 30px; 
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6em; 
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+
+<div id="header-container">
+  <h1>System Control Version</h1>
+</div>
+
+<div id="content">
+  <div class="buttons-container">
+    <button><span class="tooltip">Введите токен</span>Import</button>
+    <button><span class="tooltip">Введите токен</span>Create</button>
+    <button id="settingsButton">Settings</button>
+  </div>
+  <div class="input-box" id="tokenInput">
+    Введите свой токен: <input type="text"><button id="okButton">OK</button>
+  </div>
+</div>
+
+<script>
+const tokenInput = document.getElementById('tokenInput');
+const settingsButton = document.getElementById('settingsButton');
+const okButton = document.getElementById('okButton');
+
+settingsButton.addEventListener('click', () => {
+  tokenInput.style.display = 'block';
+});
+
+okButton.addEventListener('click', () => {
+  window.location.href = 'kiki.html';
+});
+</script>
+
+</body>
+</html>

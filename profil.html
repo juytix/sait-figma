@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Profile</title>
+<style>
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.profile-container {
+  background-color: #fff;
+  padding: 60px;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 600px; 
+  max-width: 90%;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+
+  overflow: hidden;
+  margin: 0 auto 20px;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.profile-info input[type="text"],
+.profile-info textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.profile-info textarea {
+  height: 100px;
+}
+
+.profile-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-actions button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.profile-actions button:hover {
+  background-color: #45a049;
+}
+
+a {
+  text-decoration: none;
+  color: #4CAF50;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+
+<div class="profile-container">
+  <div class="profile-picture">
+    <img src="i (1).webp" alt="Profile Picture">
+  </div>
+  <div class="profile-info">
+    <h1>juytix</h1>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="Имя" name="Имя" value="juytix" placeholder="Введите свое имя">
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="e-mail" value="juytix@gmail.com" placeholder="Enter your email">
+
+      <label for="bio">Bio:</label>
+      <textarea id="О себе" name="О себе" placeholder="Напишите о себе"></textarea>
+
+      <div class="profile-actions">
+        <button type="submit">Сохранить</button>
+      </div>
+    </form>
+      <a href="kiki.html">Back</a>
+  </div>
+</div>
+
+</body>
+</html>

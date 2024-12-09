@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>System Control Version</title>
+<style>
+body {
+  background-color: #FFFFE0;
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5em;
+}
+
+header {
+  background-color: #000000;
+  color: white;
+  padding: 80px;
+  text-align: center;
+  font-size: 6em;
+  width: 100%;
+  height: 250px;
+  margin-bottom: 40px;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #000000);
+  z-index: -1;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  width: 80%;
+  gap: 50px;
+}
+
+button {
+  background-color: #DAA520;
+  color: white;
+  padding: 50px 80px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 4em;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #B8860B;
+}
+</style>
+</head>
+<body>
+
+<header>
+  System Control Version
+</header>
+
+<div class="buttons">
+  <button onclick="goToNextPage()">Create</button>
+  <button>Import Project</button>
+</div>
+
+<script>
+function goToNextPage() {
+  if (confirm("Вы уверены, что хотите перейти на следующую страницу?")) {
+    window.location.href = "page2.html";
+  }
+}
+</script>
+
+</body>
+</html>
